@@ -1,0 +1,136 @@
+Plot lines
+
+Combat lines
+
+Exploration lines (rooms)
+
+----[ ]---- [ ]-----[ ]
+     |       |       |
+     |       |       |
+    [ ]-----[ ]-----[ ]
+                     |
+                     |
+                    [ ]
+
+    Commands
+    Move (n, s, e, w)
+    Exit dungeon
+
+    In combat
+    attack
+        "You attack the " enemy " for " damage " damage"
+    use health potion
+        "you use a health potion and recover " number " HP"
+    run
+        "You run away from the " enemy
+        "The " enemy " blocks your path and attacks"
+
+        while(combat) {
+              System.out.println("--------------------------------------");
+
+              Enemy en = new Enemy();
+
+              String enemy = en.returnName();
+              System.out.println("\t# " + enemy + " appeared! # \n");
+
+              while(en.returnHealth() > 0) {
+                System.out.println("\tYour HP: " + health);
+                System.out.println("\t" + enemy + "'s HP: " + en.returnHealth());
+                System.out.println("\n\tWhat would you like to do?");
+                System.out.println("\t1. Attack");
+                System.out.println("\t2. Drink health potion");
+                System.out.println("\t3. Run!");
+
+                String input = sc.nextLine();
+                if(input.equals("1")) {
+                  int damageDealt = rand.nextInt(attackDamage);
+                  int damageTaken = en.enemyDamage();
+
+                  en.takeDamage(damageDealt);
+                  health -= damageTaken;
+
+                  System.out.println("\t> You attack the " + enemy + " for " + damageDealt + " damage.");
+                  System.out.println("\t> You recieve " + damageTaken + " in retaliation!");
+
+                  if(health < 1) {
+                    System.out.println("You have taken too much damage and cannot go on any longer.");
+                    break;
+                  }
+                }
+                  else if(input.equals("2")) {
+                    if(numHealthPots > 0) {
+                      numHealthPots --;
+                      System.out.println("\t> You drink a health potion and heal yourself for " + healthPotionHealAmmount + "\n\t You now have " + health + " HP." + "\n\t> You have " + numHealthPots + " health potion(s) left.");
+                    }
+                    else {
+                      System.out.println("You do not have any health potions. Fight enemies for a chance to get one.");
+                    }
+                  }
+                  else if(input.equals("3")) {
+                    System.out.println("You run away from the " + enemy);
+                    continue GAME;
+                  }
+                  else {
+                    System.out.println("\tInvalid command");
+                  }
+              }
+
+
+
+                if(health < 1) {
+                  System.out.println("\nYou succumb to your wounds in the Dungeon.");
+                  break;
+                }
+
+                System.out.println("\n--------------------------------------\n");
+                System.out.println("\t # " + enemy + " was defeated! #");
+                System.out.println("\t # You have " + health + " HP left. #");
+
+                if(rand.nextInt(100) < healthPotionDropChance) {
+                  numHealthPots++;
+                  System.out.println(" # The " + enemy + " dropped a health potion! #");
+                  System.out.println(" # You now have " + numHealthPots + " health potion(s) #");
+                }
+
+                System.out.println("--------------------------------------\n");
+                System.out.println("What would you like to do now?");
+                System.out.println("1. Continue adventuring");
+                System.out.println("2. Exit dungeon");
+
+                String input = sc.nextLine();
+
+                while(!input.equals("1") && !input.equals("2")) {
+                  System.out.println("Invalid command");
+                  input = sc.nextLine();
+                }
+
+                if(input.equals("1")) {
+                  System.out.println("You decide to carry on, deeper into the Dungeon.");
+                  combat = false;
+                  continue DUNGEON;
+                }
+                else if(input.equals("2")) {
+                  System.out.println("You head out of the Dungeon, returning to the townsfolk for another day.");
+                  combat = false;
+                  endGame = true;
+                  break;
+                }
+
+
+            }
+            }
+
+            while(inCombat) {
+                std::cout << "--------------------------------------";
+            }
+
+
+            System.out.println("\n######################");
+            System.out.println("# Thanks for playing #");
+            System.out.println("######################");
+
+        // THANKS FOR PLAYING
+
+            std::cout << "\n######################\n"
+            std::cout << "# Thanks for playing #\n"
+            std::cout << "######################\n"

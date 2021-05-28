@@ -1,0 +1,26 @@
+[
+  {
+    "directory": "/home/kodi86/Documents/APCSA/build",
+    "command": "c++ -IAPCSA@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ 'APCSA@exe/src_characters_living.cpp.o' -MF 'APCSA@exe/src_characters_living.cpp.o.d' -o 'APCSA@exe/src_characters_living.cpp.o' -c ../src/characters/living.cpp",
+    "file": "../src/characters/living.cpp",
+    "output": "APCSA@exe/src_characters_living.cpp.o"
+  },
+  {
+    "directory": "/home/kodi86/Documents/APCSA/build",
+    "command": "c++ -IAPCSA@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ 'APCSA@exe/src_characters_player.cpp.o' -MF 'APCSA@exe/src_characters_player.cpp.o.d' -o 'APCSA@exe/src_characters_player.cpp.o' -c ../src/characters/player.cpp",
+    "file": "../src/characters/player.cpp",
+    "output": "APCSA@exe/src_characters_player.cpp.o"
+  },
+  {
+    "directory": "/home/kodi86/Documents/APCSA/build",
+    "command": "c++ -IAPCSA@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ 'APCSA@exe/src_commander.cpp.o' -MF 'APCSA@exe/src_commander.cpp.o.d' -o 'APCSA@exe/src_commander.cpp.o' -c ../src/commander.cpp",
+    "file": "../src/commander.cpp",
+    "output": "APCSA@exe/src_commander.cpp.o"
+  },
+  {
+    "directory": "/home/kodi86/Documents/APCSA/build",
+    "command": "c++ -IAPCSA@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -MD -MQ 'APCSA@exe/src_main.cpp.o' -MF 'APCSA@exe/src_main.cpp.o.d' -o 'APCSA@exe/src_main.cpp.o' -c ../src/main.cpp",
+    "file": "../src/main.cpp",
+    "output": "APCSA@exe/src_main.cpp.o"
+  }
+]
